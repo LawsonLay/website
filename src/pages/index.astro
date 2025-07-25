@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+// import Header from '../components/Header.astro';
+// import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -10,10 +10,33 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
+
+	<style>
+		.flex-container-row {
+			display: flex;
+			flex-direction: row;
+		}
+		.flex-container
+		{
+			display: flex;
+			flex-direction: column;
+		}
+	</style>
+
 	<body>
-		<Header />
+		<!--<Header />-->
 		<main>
-			<h1>Lawson Lay</h1>
+			<div class="flex-container-row">
+				<div><img src="/public/Profile.jpg" alt="My Profile Picture" width="1280" height="1280"></div>
+				<div class="flex-container">
+					<h1>Lawson Lay</h1>
+					<p>
+						Dynamic and detail-oriented Computer Science graduate with hands-on experience designing
+						and implementing scalable network and software solutions across IoT, web, and security
+						domains.
+					</p>
+				</div>
+			</div>
 			<p>Welcome to my website. Listed here soon are my projects, my resume, and other public information about me.</p>
 			<p>Check out my GitHub here: <a href="https://www.github.com/LawsonLay">github.com/LawsonLay</a> </p>
 			<p>Stay tuned for more stuff here, eventually.</p>
@@ -49,6 +72,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<!--	</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.-->
 			<!--</p>-->
 		</main>
-		<Footer />
+		<!--<Footer />-->
 	</body>
 </html>
