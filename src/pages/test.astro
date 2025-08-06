@@ -1,0 +1,78 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { Picture } from 'astro:assets'
+import myImage from "../assets/Profile.jpg";
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+	<style>
+		.center{
+			text-align: center;
+		}
+
+		.walltext{
+			font-family: Arial, Helvetica, sans-serif;
+			font-style: normal;
+			font-weight: bold;
+			color: #f0f0f0;
+			font-size: 50px;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			cursor: default;
+			text-align: justify;
+			margin-left: -50px;
+			margin-right: -50px;
+			z-index: 1;
+		}
+
+		.stopscrolling{
+			height: 100%;
+			overflow: hidden;
+		}
+
+		.picture{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 4;
+			width: 300px;
+			height: 300px;
+			pointer-events: none;
+			border-radius: 50%;
+			box-shadow: 0px 0px 8px;
+		}
+
+		p a {
+			color: #f0f0f0;
+			text-decoration: none;
+			transition: color 0.3s ease-in-out;
+		}
+
+		p a:hover {
+			color: black;
+			cursor: pointer;
+		}
+
+	</style>
+
+
+	<body class="stopscrolling">
+		<div>
+			<Picture src={myImage} alt="Profile" class="picture" />
+			<p class="walltext" oncopy="return false">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ex malesuada, pretium tortor a, vehicula dolor. Sed accumsan tempor eros non porta. Quisque eu posuere libero, non posuere nulla. Aliquam maximus, urna at posuere pulvinar, lorem velit dictum nisl, vel mattis magna lorem et libero. 
+				<a href="/">Donec</a> 
+				vel neque vel nisi condimentum egestas at quis ante. Vivamus at nunc purus. Vivamus nec dictum nisi. Integer at enim ac risus lacinia vestibulum vel ut ipsum. Ut sagittis ante vel est imperdiet ultricies. Aliquam consectetur fermentum blandit. Integer rutrum sagittis purus, vel sodales augue pretium eleifend. Sed justo purus, interdum et dolor a, placerat egestas urna. Sed suscipit egestas fermentum. Curabitur pulvinar, magna eget tincidunt tempus, leo nibh molestie nibh, nec tincidunt erat massa eget lorem. Vestibulum tincidunt sapien eros, in fermentum ex rhoncus sagittis. Morbi tellus ante, auctor id odio vitae, imperdiet sodales justo. Etiam venenatis ex ut condimentum volutpat. Nunc vel velit elit. Pellentesque pellentesque suscipit tempus. Praesent pharetra justo non purus facilisis ultricies. Morbi rutrum urna faucibus, malesuada leo in, maximus neque. Vivamus fermentum sit amet leo eu lobortis. Aliquam aliquam imperdiet sollicitudin. Quisque quis felis vel lacus dignissim feugiat eleifend quis leo. Proin imperdiet eros ac eros imperdiet auctor. Etiam eu justo at tellus sodales consequat. Praesent iaculis urna vitae euismod euismod. Sed ac turpis ex. Nulla facilisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et accumsan ipsum. Vivamus dignissim nisi ornare tempus sollicitudin. Morbi eget diam efficitur, lobortis sapien quis, aliquam dui. Pellentesque ut nulla non felis lacinia laoreet id eu odio. Curabitur odio neque, gravida vitae dictum in, semper quis nisi. Mauris sollicitudin, ex eget semper viverra, ex ex facilisis quam, nec rutrum eros urna ac felis. Vestibulum in augue scelerisque, eleifend nisl eu, semper leo. Donec tempor lobortis felis, sed maximus nibh semper eu. Suspendisse id tempus eros. Nullam et erat auctor, pulvinar odio sed, pellentesque nisl. Sed et lobortis eros, ac porttitor metus. Curabitur ullamcorper nibh id diam sagittis varius. Quisque fermentum semper pharetra. Vestibulum blandit vitae neque ac pretium. Fusce convallis urna fringilla metus faucibus aliquam. Donec egestas nibh sed turpis viverra, ultricies scelerisque odio vulputate. Suspendisse potenti. Fusce ac pretium nunc. Suspendisse eget sapien ac tellus euismod porttitor ut vitae turpis. Proin purus dui, varius ac fringilla et, volutpat a diam. Duis felis diam, dignissim at laoreet in, pellentesque ac felis. Nam ultrices nunc vel interdum dapibus.
+			</p>
+		</div>
+	</body>
+</html>
