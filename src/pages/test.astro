@@ -1,7 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import { Picture } from 'astro:assets'
-import myImage from "../assets/Profile.jpg";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -67,7 +65,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	<body class="stopscrolling">
 		<div>
-			<Picture src={myImage} alt="Profile" class="picture" />
+			<img src="https://avatars.githubusercontent.com/u/112530634?v=4" alt="Profile" class="picture" />
 			<p class="walltext" oncopy="return false">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet ex malesuada, pretium tortor a, vehicula dolor. Sed accumsan tempor eros non porta. Quisque eu posuere libero, non posuere nulla. Aliquam maximus, urna at posuere pulvinar, lorem velit dictum nisl, vel mattis magna lorem et libero. 
 				<a href="/">Donec</a> 
