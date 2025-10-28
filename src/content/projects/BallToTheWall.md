@@ -12,7 +12,7 @@ tags:
   - C#
 ---
 
-https://sounides.itch.io/ball-to-the-wall
+https://lawsonlay.itch.io/ball-to-the-wall
 
 
 This is a game I made in my senior game design class. It uses Unity 6's DOTS and ECS to power a voxel based destruction game. By utilizing data-oriented design and the Burst compilation, Ball to the Wall achieves high performance on many devices without relying on any game development tricks or pre-baked meshes.
